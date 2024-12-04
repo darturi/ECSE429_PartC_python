@@ -5,7 +5,8 @@ import datetime
 # Configure process name and log file path
 # process_name = "VLC"  # Replace with the name of your process
 # log_file = "process_usage_log_VLC.csv"
-log_file = "/Users/danielarturi/Desktop/McGill Fall 2024/ECSE 429/Project/PartC/ECSE429_PartC/raw_log_data8.csv"
+base = "/Users/danielarturi/Desktop/McGill Fall 2024/ECSE 429/Project/PartC/ECSE429_PartC/"
+log_file = base + "intermediate_findings/dynamicAnalysisLog/raw_log_data14.csv"
 
 page_size = 16384
 

@@ -28,8 +28,8 @@ chart_title_names_scaled = [
 chart_y_axis_names = [
     "CPU Percentage in Use (%)",
     "Bytes Available",
-    "Time Elapsed ()",
-    "Time Per Todo ()"
+    "Time Elapsed (microsecond)",
+    "Time Per Todo (microsecond)"
 ]
 
 for i in range(4):
@@ -42,12 +42,12 @@ for i in range(4):
     categories = [int(i.split("_")[-1]) for i in data.columns[1:]]
 
     # Set the outlier threshold (example: 50)
-    outlier_threshold = 30
+    outlier_threshold = 120000
 
     # Plot each series with triangle markers
     for j, series in enumerate(series_names):
         # Filter out outliers for the current series
-        if csv_files[i] == csv_files[0]:
+        if csv_files[i] == csv_files[3]:
             filtered_values = filter_outliers(data.iloc[j, 1:], outlier_threshold)
         else:
             filtered_values = data.iloc[j, 1:]
